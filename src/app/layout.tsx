@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import ClientLayout from "./ClientLayout";
+import type { Metadata } from "next";
+import { Providers } from "./provider";
+import { Header } from "@/components";
+import { ChakraColorModeScript } from "@/components/layout/ChakraColorModeScript";
 
 export const metadata: Metadata = {
   title: "Wetopia",
@@ -14,10 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head />
-      <body>
-        <ClientLayout>{children}</ClientLayout>
+      <body suppressHydrationWarning={true}>
+        <ChakraColorModeScript />
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

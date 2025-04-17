@@ -1,4 +1,4 @@
-## 🛠️ Tech Stack
+## Tech Stack
 
 Framework: Next.js 15.2 (App Router)
 
@@ -12,7 +12,13 @@ Package Manager: Yarn Berry (PnP, loose mode)
 
 Lint / Format: ESLint, Prettier
 
-## 📁 Directory Structure
+## Service Function
+
+- 미 증시 현황
+
+- 구상중.. 디자인도.. 뭔가 여태 없으면서 효율적인게 ..
+
+## Directory Structure
 
 ```bash
 /wetopia
@@ -32,9 +38,23 @@ Lint / Format: ESLint, Prettier
  ├── /next.config.js
 ```
 
+## Component Structure
+
+- 블록 쌓듯이 명시적이고 유지보수에 최적화된 계층 구조 디자인
+
+- Atoms Design Pattern의 어려운 네이밍만 버리고 철학 인용
+
+```bash
+/src/components/
+  ├── base/         # 가장 작은 디자인 단위 (Button, Text)
+  ├── block/        # UI 구성요소 조합 (FormRow, CardHeader)
+  ├── domain/       # 중간 단위 UI, 명확한 용도별 그룹 컴포넌트
+  └── container/    # 상태 관리 포함
+```
+
 <br />
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
@@ -67,7 +87,7 @@ yarn start
 
 Jest / @testing-library/react / Playwright
 
-## Function & Purpose
+## Technical Function
 
 - App Router 기반 구조화된 라우팅
 
@@ -75,16 +95,16 @@ Jest / @testing-library/react / Playwright
 
 - Recoil을 통한 클라이언트 상태 관리
 
-- Emotion 기반 글로벌 및 컴포넌트 스타일링
-
-- 뉴스 데이터 실시간 연동 (예정)
+- Chakra-ui 기반 글로벌 및 컴포넌트 스타일링
 
 <br />
 
 ## Deployment
 
-- Frontend : Amplify
+- Frontend : Next.js(AWS Amplify)
 
-- Backend(Go) : AWS Service(lamda) 사용 예정
+- Backend(Go) : Nest.js(AWS App Runner)
 
-- DB : AWS 사용 예정
+- DB : postgresql(neon)
+
+##

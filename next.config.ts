@@ -2,13 +2,13 @@ import type { NextConfig } from "next";
 
 export const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {},
   compiler: {
     emotion: true,
   },
   webpack: (config) => {
     return config; // babel-loader 제거
   },
+  experimental: {},
   // webpack(config) {
   //   config.module.rules.push({
   //     test: /\.(js|ts|jsx|tsx)$/,
