@@ -2337,6 +2337,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "date-fns@npm:4.1.0"
+  checksum: 10c0/b79ff32830e6b7faa009590af6ae0fb8c3fd9ffad46d930548fbb5acf473773b4712ae887e156ba91a7b3dc30591ce0f517d69fd83bd9c38650fdc03b4e0bac8
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.4, debug@npm:^4.4.0":
   version: 4.4.0
   resolution: "debug@npm:4.4.0"
@@ -2969,6 +2976,13 @@ __metadata:
   version: 3.1.2
   resolution: "exponential-backoff@npm:3.1.2"
   checksum: 10c0/d9d3e1eafa21b78464297df91f1776f7fbaa3d5e3f7f0995648ca5b89c069d17055033817348d9f4a43d1c20b0eab84f75af6991751e839df53e4dfd6f22e844
+  languageName: node
+  linkType: hard
+
+"fancy-canvas@npm:2.1.0":
+  version: 2.1.0
+  resolution: "fancy-canvas@npm:2.1.0"
+  checksum: 10c0/2b863b1548214ac793a5104154be389dbca6847c53c8bda88e4309f14bcdb498f4da21e368b573f3ab5f458d3b47c3f0ef731a7b90c8264b23c1cf0bfc9d1da3
   languageName: node
   linkType: hard
 
@@ -4077,6 +4091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lightweight-charts@npm:4.1.1":
+  version: 4.1.1
+  resolution: "lightweight-charts@npm:4.1.1"
+  dependencies:
+    fancy-canvas: "npm:2.1.0"
+  checksum: 10c0/a1052aa176d94c60c6af51336a6d8d1a87e7186d96a7d510e292b596d2faf4f0edd272d48c3d2eaab4c4c21af3e80ff9d9e28bd7dd0daf3b1a14570d5cec1e6b
+  languageName: node
+  linkType: hard
+
 "lilconfig@npm:^2.0.5":
   version: 2.1.0
   resolution: "lilconfig@npm:2.1.0"
@@ -4136,6 +4159,25 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 10c0/655d110220983c1a4b9c0c679a2e8016d4b67f6e9c7b5435ff5979ecdb20d0813f4dec0a08674fcbdd4846a3f07edbb50a36811fd37930b94aaa0d9daceb017e
+  languageName: node
+  linkType: hard
+
+"lottie-react@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "lottie-react@npm:2.4.1"
+  dependencies:
+    lottie-web: "npm:^5.10.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/7f6a0a2cf2af25deabe7b4d4c9917e47d12016673613c59dcdd8ef52e10e914dd0c1f71d4a275d56aaba03fe9d85b333087f7c8d40a8f967ece4a0444c7a3cdf
+  languageName: node
+  linkType: hard
+
+"lottie-web@npm:^5.10.2":
+  version: 5.12.2
+  resolution: "lottie-web@npm:5.12.2"
+  checksum: 10c0/0aeaf631b10a76afd025df70c2a1486543530708e07a316946c08e55891dac483ffbaf2bf3648ae0b9c54c733118a0a086fd150aa76f7848606214c67ad72c30
   languageName: node
   linkType: hard
 
@@ -5125,9 +5167,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recharts@npm:^2.15.2":
-  version: 2.15.2
-  resolution: "recharts@npm:2.15.2"
+"recharts@npm:^2.15.3":
+  version: 2.15.3
+  resolution: "recharts@npm:2.15.3"
   dependencies:
     clsx: "npm:^2.0.0"
     eventemitter3: "npm:^4.0.1"
@@ -5140,7 +5182,7 @@ __metadata:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/14273be911d208ebdc29737b19129c6be6731d51f1e441f6a6ea98425543e29d28f140518905b42f965c12ce6f81055d50389621f5429d55cbeab47fe9d5692c
+  checksum: 10c0/76757605d67a07562bcfb1a4b9a3a0b6b5fed2b84ee5f00813cedf151502969965bf7bd3856eb7e5d60c1d71c7b0d67d9ae2f1ef45676152fcd532abafc501fb
   languageName: node
   linkType: hard
 
@@ -6304,11 +6346,14 @@ __metadata:
     chart.js: "npm:^4.4.8"
     d3-path: "npm:^3.1.0"
     d3-time: "npm:^3.1.0"
+    date-fns: "npm:^4.1.0"
     debug: "npm:^4.4.0"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.2.4"
     eslint-plugin-react-hooks: "npm:^5.2.0"
     framer-motion: "npm:^10.16.1"
+    lightweight-charts: "npm:4.1.1"
+    lottie-react: "npm:^2.4.1"
     next: "npm:^15.2.4"
     prop-types: "npm:^15.8.1"
     punycode: "npm:^2.3.1"
@@ -6316,7 +6361,7 @@ __metadata:
     react-chartjs-2: "npm:^5.3.0"
     react-dom: "npm:18.2.0"
     react-icons: "npm:^5.5.0"
-    recharts: "npm:^2.15.2"
+    recharts: "npm:^2.15.3"
     recoil: "npm:^0.7.7"
     supports-color: "npm:^10.0.0"
     typescript: "npm:^5"

@@ -31,7 +31,7 @@ const colors = {
   },
   background: {
     light: "#ffffff",
-    dark: "#1a202c", // gray.900
+    dark: "#121315", // gray.900
   },
 };
 

@@ -2,7 +2,7 @@
 
 import { Flex, Link, useColorModeValue } from "@chakra-ui/react";
 // import { useEffect } from "react";
-// import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 import NextLink from "next/link";
 import { useTheme } from "@chakra-ui/react";
 
@@ -77,7 +77,7 @@ export default function Header() {
         <Text fontSize="sm" minW="70px" textAlign="right">
           {time}
         </Text> */}
-        {/* <ThemeToggle /> */}
+        <ThemeToggle />
       </Flex>
     </Flex>
   );

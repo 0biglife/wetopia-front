@@ -1,3 +1,4 @@
 import StockChart from "./StockChart";
+import StockContainer from "./StockChartContainer";
 
-export { StockChart };
+export { StockChart, StockContainer };

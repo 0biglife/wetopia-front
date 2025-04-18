@@ -1,29 +1,25 @@
-import { StockForm } from "@/types";
-import styles from "./page.module.css";
 import { getStockDashboard } from "@/lib/api";
+import { Box } from "@chakra-ui/react";
+import { StockContainer } from "@/components";
 // import { StockChartContainer } from "@/components";
 
+/**
+ *
+ * @memo
+ *
+ * - page 서버 컴포넌트에서 불러올 클라이언트 컴포넌트는 모두 @components 의 domain에서 가져옴
+ * - src/app 내부에 클라이언트 컴포넌트 생성 지양
+ * - "이중 번들링"이나 예상치 못한 하이드레이션 문제가 생길 수 있기 때문!
+ * - 단, domain 내부에서만 React Hook, Recoil, React-Query 등 포함
+ */
 export default async function Home() {
   const stocks = await getStockDashboard();
-  console.log("[SSR] Stock data:", stocks);
 
-  const aapl = stocks.find((s: StockForm) => s.symbol === "AAPL");
-
-  if (!aapl) return <p>No data for AAPL</p>;
+  if (!stocks) return <p>No data</p>;
 
   return (
-    <div className={styles.page}>
-      <section
-        style={{
-          width: "100%",
-          maxWidth: "800px",
-          height: "400px",
-          margin: "2rem auto",
-        }}
-      >
-        <h2 style={{ textAlign: "center" }}>AAPL Stock Chart (1mo)</h2>
-        {/* <StockChartContainer data={aapl} /> */}
-      </section>
-    </div>
+    <Box px={6} py={2}>
+      <StockContainer data={stocks} />
+    </Box>
   );
 }

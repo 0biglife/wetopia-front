@@ -4,6 +4,7 @@ export interface StockDailyPoint {
   close: number;
   high: number;
   low: number;
+  volume: string | number;
 }
 
 export interface StockForm {
