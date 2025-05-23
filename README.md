@@ -27,11 +27,15 @@ Lint / Format: ESLint, Prettier
  │    ├── /app
  │    │    ├── /news
  │    │    │    ├── page.tsx  → 블로그 목록 페이지
- │    │    ├── /page.tsx  → 메인 페이지
- │    │    ├── /layout.tsx  → 공통 레이아웃
+ │    │    ├── /page.tsx  → 메인 페이지 # SSR + React Query 적용
+ │    │    └── /layout.tsx  → 공통 레이아웃 # ClientProvider 사용
+ │    ├── /providers
+ │    │   ├── ClientProvider.tsx # Chakra + QueryClientProvider
+ │    │   └── ReactQuerySSRProvider.tsx # SSR + Hydrate 전용
  │    ├── /components  → UI 및 공용 컴포넌트
  │    │    ├── /...
- │    ├── /lib  → API, 유틸 함수 ..
+ │    ├── /lib # API, 유틸 함수 ..
+ │    │   └── api/stock.api.ts
  │    ├── /hooks  → 커스텀 훅 (React Query, Recoil 연동)
  │    ├── /styles  → Emotion 스타일
  │    ├── /types  → 타입 인터페이스

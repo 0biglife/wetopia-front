@@ -43,7 +43,6 @@ export default function StockChart({ data }: Props) {
     "rgba(0, 0, 0, 0.05)",
     "rgba(255, 255, 255, 0.05)"
   );
-  // const crosshairLabelColor = useColorModeValue("rgba(0,0,0,0.6)", "rgba(255,255,255,0.1)");
 
   const sorted = useMemo(
     () =>

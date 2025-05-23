@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Providers } from "./provider";
 import { Header } from "@/components";
 import { ChakraColorModeScript } from "@/components/layout/ChakraColorModeScript";
+import { ClientProvider } from "@/providers";
 
 export const metadata: Metadata = {
   title: "Wetopia",
@@ -20,10 +20,10 @@ export default function RootLayout({
       <head />
       <body suppressHydrationWarning={true}>
         <ChakraColorModeScript />
-        <Providers>
+        <ClientProvider>
           <Header />
           {children}
-        </Providers>
+        </ClientProvider>
       </body>
     </html>
   );

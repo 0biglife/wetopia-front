@@ -40,6 +40,9 @@ export default function Header() {
   return (
     <Flex
       as="header"
+      position="sticky"
+      top={0}
+      zIndex={50}
       justify="space-between"
       align="center"
       px={6}
@@ -48,9 +51,6 @@ export default function Header() {
       color={textColor}
       borderBottom="1px solid"
       borderColor={borderColor}
-      position="sticky"
-      top={0}
-      zIndex={50}
     >
       <Link
         as={NextLink}
