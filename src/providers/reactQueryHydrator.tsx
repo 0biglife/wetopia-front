@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-query";
 
 import { ReactNode, useState } from "react";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export default function ReactQueryHydrator({
   children,
@@ -19,7 +20,12 @@ export default function ReactQueryHydrator({
 
   return (
     <QueryClientProvider client={queryClient}>
-      <HydrationBoundary state={dehydratedState}>{children}</HydrationBoundary>
+      <HydrationBoundary state={dehydratedState}>
+        <>
+          {children}
+          <ReactQueryDevtools initialIsOpen={false} />
+        </>
+      </HydrationBoundary>
     </QueryClientProvider>
   );
 }
