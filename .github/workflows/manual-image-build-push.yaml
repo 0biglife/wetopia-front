@@ -1,0 +1,30 @@
+name: Triggered Build and Push Docker Image
+on:
+  workflow_dispatch:
+    inputs:
+      TARGET_NAME:
+        type: choice
+        description: Container Registry Target Repo Name (e.g. front-dev, front-stag, front-prod)
+        required: true
+        options:
+          - front-dev
+          - front-stag
+          - front-prod
+
+      CUSTOM_TAG:
+        type: string
+        description: "Optional: Custom image tag (overrides secrets.VERSION if provided)"
+        required: false
+
+permissions:
+  contents: read
+
+env:
+  SKUBER_PLUS_REGISTRY: ${{ secrets.SKUBER_PLUS_REGISTRY }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
